@@ -3,6 +3,8 @@ import Gamepad from "../Images/Cart (17).png";
 import Wiredkeyboard from "../Images/Cart (18).png";
 import Gamingmonitor from "../Images/Cart (16).png";
 import Comfortchair from "../Images/Cart With Flat Discount.png";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function SaleSection() {
   const initialTime = (((3 * 24 + 23) * 60 + 19) * 60 + 56) * 1000; // in ms
@@ -36,9 +38,9 @@ export default function SaleSection() {
   };
 
   const { days, hours, minutes, seconds } = formatTime(timeLeft);
-
+  const navigate = useNavigate();
   return (
-    <div >
+    <div>
       <div className="py-9 xl:px-[5rem]  px-4">
         <div className="flex gap-2 items-center">
           <div className="px-[6px] py-[14px] bg-[#DB4444] rounded-sm"></div>
@@ -94,21 +96,48 @@ export default function SaleSection() {
           <div className="flex gap-3 lg:gap-8 xl:gap-[50px] w-max py-6">
             {/* Invisible spacing element to create initial 5px gap */}
             <div className="pointer-events-none snap-start shrink-0 w-[5px]"></div>
-            <img src={Gamepad} className="shrink-0 snap-start " />
-            <img src={Wiredkeyboard} className="shrink-0 snap-start" />
-            <img src={Gamingmonitor} className="shrink-0 snap-start" />
-            <img src={Comfortchair} className="shrink-0 snap-start" />
-            <img src={Gamingmonitor} className="shrink-0 snap-start" />
-            <img src={Comfortchair} className="shrink-0 snap-start" />
-            <img src={Gamepad} className="shrink-0 snap-start " />
-            <img src={Wiredkeyboard} className="shrink-0 snap-start" />
+            <Link to="/product/1">
+              <img src={Gamepad} className="shrink-0 snap-start " />
+            </Link>
+            <Link to="/product/2">
+              <img src={Wiredkeyboard} className="shrink-0 snap-start" />
+            </Link>
+            <Link to="/product/3">
+              <img src={Gamingmonitor} className="shrink-0 snap-start" />
+            </Link>
+
+            <Link to="/product/4">
+              {" "}
+              <img src={Comfortchair} className="shrink-0 snap-start" />
+            </Link>
+            <Link to="/product/5">
+              {" "}
+              <img src={Gamingmonitor} className="shrink-0 snap-start" />
+            </Link>
+            <Link to="/product/6">
+              {" "}
+              <img src={Comfortchair} className="shrink-0 snap-start" />
+            </Link>
+            <Link to="/product/7">
+              {" "}
+              <img src={Gamepad} className="shrink-0 snap-start " />
+            </Link>
+            <Link to="/product/8">
+              <img src={Wiredkeyboard} className="shrink-0 snap-start" />
+            </Link>
+
             {/* Invisible spacing element to create initial 5px gap */}
             <div className="pointer-events-none snap-start shrink-0 w-[5px]"></div>
           </div>
         </div>
 
-       <div className="flex items-center justify-center py-5">
-        <button className="bg-[#DB4444] text-white px-7 py-3 rounded-sm hover:bg-[#f67272] transition duration-300   ">View all products</button>
+        <div className="flex items-center justify-center py-5">
+          <button
+            className="bg-[#DB4444] text-white px-7 py-3 rounded-sm hover:bg-[#f67272] transition duration-300   "
+            onClick={() => navigate("/all-products")}
+          >
+            View all products
+          </button>
         </div>
       </div>
     </div>

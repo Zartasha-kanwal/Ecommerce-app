@@ -188,6 +188,25 @@ export default function Header() {
                       Signup
                     </NavLink>
                   </div>
+
+                  <div className="flex-col flex">
+                    <div className="text-teal-500 font-bold text-xl border-l-8  border-teal-500 px-3 rounded-2xl mb-4">
+                      Your Picks
+                    </div>
+                    <div className=" flex justify-evenly items-center">
+                      <Link to="/cart">
+                        <img src={cart} alt="Cart" className="h-[2.5rem]" />
+                      </Link>
+
+                      <Link to="/wishlist">
+                        <img
+                          src={wishlist}
+                          alt="Wishlist"
+                          className="h-[2.5rem]"
+                        />
+                      </Link>
+                    </div>
+                  </div>
                 </nav>
               </div>
             </div>
