@@ -1,5 +1,7 @@
 # 🛒 Ecommerce App (Frontend)
 
+![Dashboard Screenshot](Ecommerce.png)
+### 🧠 About project
 A modern, responsive **ecommerce frontend application** built using **React.js** and **Tailwind CSS**. It includes key features like product listings, cart management, and checkout flow—all styled cleanly and designed for a smooth user experience.
 
 ---
